@@ -1,4 +1,4 @@
-module github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+module github.com/jovalle/nfs-client-provisioner
 
 go 1.14
 

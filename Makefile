@@ -28,10 +28,10 @@ all: build image build_arm image_arm
 container: build image build_arm image_arm
 
 build:
-	CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-extldflags "-static"' -o docker/x86_64/nfs-subdir-external-provisioner ./cmd/nfs-subdir-external-provisioner
+	CGO_ENABLED=0 GOOS=linux go build -a -ldflags '-extldflags "-static"' -o nfs-subdir-external-provisioner ./cmd/nfs-subdir-external-provisioner
 
 build_arm:
-	CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -a -ldflags '-extldflags "-static"' -o docker/arm/nfs-subdir-external-provisioner ./cmd/nfs-subdir-external-provisioner 
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7 go build -a -ldflags '-extldflags "-static"' -o nfs-subdir-external-provisioner ./cmd/nfs-subdir-external-provisioner
 
 image:
 	docker build -t $(MUTABLE_IMAGE) docker/x86_64

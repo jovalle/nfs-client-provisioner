@@ -37,7 +37,7 @@ Make sure your NFS server is accessible from your Kubernetes cluster and get the
 
 To setup the provisioner you will download a set of YAML files, edit them to add your NFS server's connection information and then apply each with the `kubectl` / `oc` command.
 
-Get all of the files in the [deploy](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/tree/master/deploy) directory of this repository. These instructions assume that you have cloned the [kubernetes-sigs/nfs-subdir-external-provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner/) repository and have a bash-shell open in the root directory.
+Get all of the files in the [deploy](https://github.com/kubernetes-sigs/nfs-client-provisioner/tree/master/deploy) directory of this repository. These instructions assume that you have cloned the [kubernetes-sigs/nfs-client-provisioner](https://github.com/kubernetes-sigs/nfs-client-provisioner/) repository and have a bash-shell open in the root directory.
 
 **Step 3: Setup authorization**
 
@@ -195,4 +195,4 @@ The pipeline adds several labels:
 
 **Important:**
 * The pipeline performs the docker login command using `REGISTRY_USERNAME` and `REGISTRY_TOKEN` secrets, which have to be provided.
-* You also need to provide the `DOCKER_IMAGE` secret specifying your Docker image name, e.g., `quay.io/[username]/nfs-subdir-external-provisioner`.
+* You also need to provide the `DOCKER_IMAGE` secret specifying your Docker image name, e.g., `quay.io/[username]/nfs-client-provisioner`.
